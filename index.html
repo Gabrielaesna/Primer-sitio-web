@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primer Sitio Web con Bootstrap</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c4e3f3;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        header, footer {
+            background-color: #ff9933;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        .highlighted {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #descripcion, .highlighted {
+            color: #333;
+        }
+        /* Agrupación de selectores */
+        #autor p, #temas p {
+            font-style: italic;
+            color: #555;
+        }
+        /* Lista con selectores descendientes */
+        ul.art-list {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        ul.art-list li {
+            margin-bottom: 10px;
+        }
+        /* Pseudo-clase hover */
+        nav a:hover {
+            color: #ff6347; /* Tomato color */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Estructura de la maqueta -->
+    <header class="mb-3">
+        <h1>Esto es una etiqueta &lt;header&gt;</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navegación</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#section">Ir a sección</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aside">Ir a aside</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#descripcion">Descripción</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#temas">Temas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#autor">Sobre el Autor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#movimientos">Movimientos Artísticos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+        <section id="section" class="col-md-8 mb-3">
+            <h2>Esto es una etiqueta &lt;section&gt;</h2>
+            <p>Contenido de la sección.</p>
+        </section>
+        <aside id="aside" class="col-md-4 mb-3">
+            <h2>Esto es una etiqueta &lt;aside&gt;</h2>
+            <p>Contenido del aside.</p>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Esto es una etiqueta &lt;footer&gt;</p>
+    </footer>
+
+    <!-- Contenido de "Mi Primer Sitio Web" -->
+    <header>
+        <h1>Mi Primer Sitio Web</h1>
+    </header>
+
+    <nav>
+        <a href="#descripcion">Descripción</a>
+        <a href="#temas">Temas</a>
+        <a href="#autor">Sobre el Autor</a>
+        <a href="#movimientos">Movimientos Artísticos</a>
+    </nav>
+
+    <section>
+        <div class="content">
+            <article>
+                <h2 id="descripcion" class="highlighted">Descripción</h2>
+                <p>Este sitio web está dedicado a explorar el mundo del arte. A lo largo de las diferentes secciones, encontrarás información sobre varios temas interesantes relacionados con estas áreas.</p>
+            </article>
+
+            <article>
+                <h2 id="temas" class="highlighted">Temas y Subtemas</h2>
+                <ul class="art-list">
+                    <li>Arte:
+                        <ul class="art-list">
+                            <li>Historia del arte</li>
+                            <li>Movimientos artísticos</li>
+                            <li>Biografías de artistas</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+
+            <article>
+                <h2 id="autor" class="highlighted">Sobre el Autor</h2>
+                <p>Nombre: Gabriela Escobar</p>
+                <p>Contacto: 123-456-7890</p>
+                <p>Correo: gabrielaescovarnav@gmail.com</p>
+                <p>Institución: Skolmi</p>
+            </article>
+
+            <!-- Nueva sección con tabla -->
+            <article>
+                <h2 id="movimientos" class="highlighted">Movimientos Artísticos</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Movimiento</th>
+                            <th>Período</th>
+                            <th>Características</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://es.wikipedia.org/wiki/Renacimiento" target="_blank">Renacimiento</a></td>
+                            <td>Siglos XIV-XVII</td>
+                            <td><a href="#descripcion">Énfasis en el humanismo, perspectiva y proporciones realistas</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://es.wikipedia.org/wiki/Barroco" target="_blank">Barroco</a></td>
+                            <td>Siglo XVII</td>
+                            <td>Uso dramático de la luz y sombra, composición dinámica</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://es.wikipedia.org/wiki/Impresionismo" target="_blank">Impresionismo</a></td>
+                            <td>Finales del siglo XIX</td>
+                            <td>Pinceladas sueltas, énfasis en la luz y el color</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://es.wikipedia.org/wiki/Surrealismo" target="_blank">Surrealismo</a></td>
+                            <td>Siglo XX</td>
+                            <td>Imágenes oníricas, yuxtaposición de elementos incongruentes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Gabriela Escobar. Todos los derechos reservados.</p>
+    </footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
